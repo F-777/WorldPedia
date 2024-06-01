@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(181, 157, 90, 1);
+        }
+        h2 {
+            margin: 0 0 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(181, 157, 90, 1);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+        }
+        .social-btn {
+            width: 48%;
+            padding: 10px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .google-btn {
+            background-color: black;
+        }
+        .facebook-btn {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 align="center">OUTPOST</h2>
+        <h3 align="center">Login Form</h3>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="username" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn"><a href="Europa Union.html">Login</a></button>
+        </form>
+        <div class="social-login">
+            <button class="social-btn google-btn" onclick="googleLogin()">
+                Login with Google
+            </button>
+            <button class="social-btn facebook-btn" onclick="facebookLogin()">
+                Login with Facebook
+            </button>
+        </div>
+    </div>
+
+    <!-- Load the Google API library -->
+    <script src="server.js" async defer></script>
+    <script>
+        function googleLogin() {
+            // Function to handle Google login
+            console.log('Google login clicked');
+        }
+        
+        function facebookLogin() {
+            // Function to handle Facebook login
+            console.log('Facebook login clicked');
+        }
+    </script>
+</body>
+</html>
